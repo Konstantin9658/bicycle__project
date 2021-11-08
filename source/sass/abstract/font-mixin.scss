@@ -1,0 +1,12 @@
+@mixin font($size, $lh, $weight, $style) {
+  font-family: $font-opensans;
+  font-size: $size;
+  line-height: $lh;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin resize-txt($size, $lh) {
+  font-size: $size;
+  line-height: $lh;
+}

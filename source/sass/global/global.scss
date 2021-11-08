@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100vh;
+  min-width: $min-width;
+  background-color: $main-white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px)
+  }
+
+  70% {
+    transform: translateY(30px)
+  }
+
+  90% {
+    transform: translateY(-10px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}

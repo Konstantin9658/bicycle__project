@@ -1,0 +1,75 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 503px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 496px;
+    justify-content: flex-start;
+    padding: 70px 15px;
+  }
+
+  @media (max-width: 555px) {
+    min-height: 817px;
+  }
+
+  h2 {
+    padding-bottom: 50px;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 38px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /* Убираем исходные маркеры */
+  counter-reset:  item; /* Обнуляем счетчик списка */
+
+  @media (max-width: $tablet-width) {
+    gap: 40px 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    row-gap: 35px;
+  }
+}
+
+.features__item {
+  @include font(22px, 34px, 400, normal);
+  color: $main-black;
+  position: relative;
+  padding-top: 54px;
+  width: 263px;
+  text-align: center;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $mobile-width) {
+    @include resize-txt(18px, 34px);
+  }
+
+  &:nth-child(-n+9)::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include font(28px, 38px, 700, normal);
+    color: $main-cyan;
+    content: '0' counter(item);
+    counter-increment: item; /* Задаём имя счетчика */
+  }
+
+  &:nth-child(n+10)::before {
+    content: counter(item);
+    counter-increment: item; /* Задаём имя счетчика */
+  }
+}

@@ -1,0 +1,14 @@
+.main {
+  flex-grow: 1;
+
+  h2 {
+    @include font(30px, 30px, 600, normal);
+    color: $dark-gray;
+    margin: 0;
+    letter-spacing: -.2px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(24px, 41px);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin vp--767 {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin vp--1023 {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin vp--1024 {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}

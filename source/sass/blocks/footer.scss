@@ -1,0 +1,135 @@
+.footer {
+  width: 100%;
+  min-height: 1002px;
+  background-color: $main-white;
+  text-align: center;
+  padding-top: 150px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 812px;
+    padding-top: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 633px;
+  }
+
+  h2 {
+    @include font(30px, 30px, 600, normal);
+    color: $dark-gray;
+    margin: 0;
+    padding-bottom: 30px;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(24px, 30px);
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(18px, 30px);
+    }
+  }
+
+  address {
+    @include font(17px, 31px, 300, normal);
+    color: rgba($main-black, .7);
+    padding-bottom: 42px;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: 20px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobile-width) {
+      padding: 0 26px 20px;
+    }
+  }
+}
+
+.footer__wrapper {
+  width: 957px;
+  margin: 0 auto;
+
+  iframe {
+    width: 100%;
+    height: 530px;
+    margin-bottom: 30px;
+
+    @media (max-width: $tablet-width) {
+      height: 545px;
+      margin-bottom: 13px;
+    }
+
+    @media (max-width: $mobile-width) {
+      height: 250px;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding: 0 35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.footer__contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+
+  @media(min-width: 768px) {
+    width: 561px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding: 0 15px;
+    align-items: center;
+  }
+}
+
+.footer__contact-item {
+
+  &:not(:first-child) {
+    letter-spacing: 1px;
+    padding-right: 3px;
+
+    @media (max-width: $mobile-width) {
+      margin-left: 0;
+      margin-top: 22px;
+    }
+  }
+
+  svg {
+    fill: none;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 15px;
+  }
+}
+
+.footer__contact-link {
+  @include font(16px, 22px, 300, normal);
+  color: rgba($main-black, .5);
+
+  &:hover,
+  &:focus-visible {
+    transition: $trans--300;
+    color: rgba($main-black, .7);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
