@@ -35,10 +35,14 @@
 
   h2 {
     color: $main-white;
-    padding-bottom: 20px;
+    padding: 20px;
 
     @media (max-width: $tablet-width) {
       @include resize-txt(24px, 30px);
+    }
+
+    @media (max-width: $mobile-width) {
+      padding: 0 0 20px 0;
     }
   }
 
@@ -66,7 +70,7 @@
 }
 
 .video__content-shift-lg {
-  @include vp--1024 {
+  @media (min-width: $desktop-width) {
     display: block;
   }
 }
@@ -83,17 +87,20 @@
   height: 522px;
   margin: 0 auto;
   background: url("../img/video-preview-img-lg.jpg") no-repeat, linear-gradient(145deg,$main-black 0%, #080808 50%);
+  background-image: url("../img/video-preview-img-lg.webp");
 
   @media (max-width: $tablet-width) {
     width: 503px;
     height: 282px;
     background: url("../img/video-preview-img-md.jpg") no-repeat, linear-gradient(145deg,$main-black 0%, #080808 50%);
+    background-image: url("../img/video-preview-img-md.webp");
   }
 
   @media (max-width: $mobile-width) {
     width: 288px;
     height: 162px;
     background: url("../img/video-preview-img.jpg") no-repeat, linear-gradient(145deg,$main-black 0%, #080808 50%);
+    background-image: url("../img/video-preview-img.webp");
   }
 }
 
@@ -116,9 +123,15 @@
   }
 
   svg {
+    margin-left: 5px;
+
     @media (min-width: $min-width) and (max-width: $mobile-width), (min-width: $desktop-width) {
       width: 13px;
       height: 18px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-top: 4px;
     }
   }
 

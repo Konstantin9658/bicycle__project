@@ -13,33 +13,34 @@
     <div class="header__wrapper">
       <nav class="header__nav header__nav--no-js">
         <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#about">О нас</a></li>
-          <li class="header__nav-item"><a href="#type">Виды велосипедов</a></li>
-          <li class="header__nav-item"><a href="#video">Видео про велосипеды</a></li>
-          <li class="header__nav-item"><a href="#contact">Контакты</a></li>
+          <li class="header__nav-item"><a class="header__nav-item-link" href="#about">О нас<span></span></a></li>
+          <li class="header__nav-item"><a class="header__nav-item-link" href="#type">Виды велосипедов<span></span></a></li>
+          <li class="header__nav-item"><a class="header__nav-item-link" href="#video">Видео про велосипеды<span></span></a></li>
+          <li class="header__nav-item"><a class="header__nav-item-link" href="#contact">Контакты<span></span></a></li>
         </ul>
       </nav>
       <button class="header__nav-btn header__nav-btn--burger header__nav-btn--no-js" aria-label="Меню"><span></span></button>
       <div class="header__content">
-        <div class="header__text">
           <svg width="68" height="21" role="img" aria-label="Логотип компании">
             <use xlink:href="img/sprite.svg#icon-logo"></use>
           </svg>
-          <h1>Мы продаем<br class="header__text-shift-lg"> велосипеды</h1>
-          <p>Наш магазин отбирает только самые<br class="header__text-shift-lg"> лучшие<br class="header__text-shift-md"> велосипеды для продажи</p>
-        </div>
-        <form class="header__form" action="https://echo.htmlacademy.ru/" method="post">
-          <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <label class="visually-hidden" for="name-field">Имя</label>
-          <input id="name-field" name="Имя" type="text" placeholder="Введите Ваше Имя" required>
-          <label class="visually-hidden" for="tel-field">Телефон</label>
-          <input id="tel-field" name="Телефон" type="number" placeholder="Введите Ваш номер телефона" required>
-          <button class="button" type="submit">Подобрать велосипед мечты</button>
-        </form>
+          <h1>Мы продаем<br class="header__content-shift-lg"> велосипеды</h1>
+          <p>Наш магазин отбирает только самые<br class="header__content-shift-lg"> лучшие<br class="header__content-shift-md"> велосипеды для продажи</p>
       </div>
     </div>
   </header>
   <main class="main">
+    <section class="feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+        <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <label class="visually-hidden" for="name-field">Имя</label>
+        <input id="name-field" name="Имя" type="text" placeholder="Введите Ваше Имя" required>
+        <label class="visually-hidden" for="tel-field">Телефон</label>
+        <input id="tel-field" name="Телефон" type="number" placeholder="Введите Ваш номер телефона" required>
+        <button class="button" type="submit">Подобрать велосипед мечты</button>
+      </form>
+    </section>
     <section class="features" id="about">
       <h2>Несколько фактов о нас</h2>
       <ol class="features__list">
@@ -55,8 +56,11 @@
         <div class="type__card">
           <div class="type__card-img">
             <picture>
+              <!-- 1x: 270px; 2x: 540px -->
               <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bicycle-type1.webp 1x, ./img/bicycle-type1@2x.webp 2x">
+              <!-- 1x: 342px; 2x: 684px -->
               <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bicycle-type1-lg.webp 1x, ./img/bicycle-type1-lg@2x.webp 2x">
+              <!-- 1x: 270px; 2x: 540px -->
               <img src="./img/bicycle-type1.png" srcset="./img/bicycle-type1@2x.png 2x" width="342" height="503" alt="Дорожный велосипед">
             </picture>
           </div>
@@ -65,8 +69,11 @@
         <div class="type__card">
           <div class="type__card-img">
             <picture>
+              <!-- 1x: 270px; 2x: 540px -->
               <source media="(max-width: 1023px)" type="image/webp"  srcset="./img/bicycle-type2.webp 1x, ./img/bicycle-type2@2x.webp 2x">
+              <!-- 1x: 342px; 2x: 684px -->
               <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bicycle-type2-lg.webp 1x, ./img/bicycle-type2-lg@2x.webp 2x">
+              <!-- 1x: 270px; 2x: 540px -->
               <img src="./img/bicycle-type2.png" srcset="./img/bicycle-type2@2x.png 2x" width="342" height="566" alt="Горный велосипед">
             </picture>
           </div>
@@ -75,8 +82,11 @@
         <div class="type__card">
           <div class="type__card-img">
             <picture>
+              <!-- 1x: 270px; 2x: 540px -->
               <source media="(max-width: 1023px)" type="image/webp" srcset="./img/bicycle-type3.webp 1x, ./img/bicycle-type3@2x.webp 2x">
+              <!-- 1x: 342px; 2x: 684px -->
               <source media="(min-width: 1024px)" type="image/webp" srcset="./img/bicycle-type3-lg.webp 1x, ./img/bicycle-type3-lg@2x.webp 2x">
+              <!-- 1x: 270px; 2x: 540px -->
               <img src="./img/bicycle-type3.png" srcset="./img/bicycle-type3@2x.png 2x" width="342" height="512" alt="Детский велосипед">
             </picture>
           </div>

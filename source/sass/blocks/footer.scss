@@ -4,6 +4,7 @@
   background-color: $main-white;
   text-align: center;
   padding-top: 150px;
+  flex-shrink: 0;
 
   @media (max-width: $tablet-width) {
     min-height: 812px;
@@ -121,7 +122,7 @@
 
 .footer__contact-link {
   @include font(16px, 22px, 300, normal);
-  color: rgba($main-black, .5);
+  color: rgba($main-black, .7);
 
   &:hover,
   &:focus-visible {

@@ -8,3 +8,15 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}

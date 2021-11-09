@@ -1,12 +1,14 @@
 const header = document.querySelector('.header');
 const btnMenu = header.querySelector('.header__nav-btn');
 const menu = header.querySelector('.header__nav');
+const body = document.querySelector('.page__body');
+const navItemsLink = header.querySelectorAll('.header__nav-item-link');
 
 menu.classList.remove('header__nav--no-js');
 btnMenu.classList.remove('header__nav-btn--no-js');
 
 // собираем все якоря; устанавливаем время анимации и количество кадров
-const anchors = [].slice.call(header.querySelectorAll('a[href*="#"]'))
+const anchors = [].slice.call(navItemsLink);
 const animationTime = 1000;
 const framesCount = 20;
 
@@ -15,12 +17,22 @@ btnMenu.addEventListener('click', () => {
     btnMenu.classList.remove('header__nav-btn--burger');
     btnMenu.classList.add('header__nav-btn--closed');
     menu.classList.add('header__nav--show');
+    body.classList.toggle('page__body--hidden');
   } else {
+    body.classList.toggle('page__body--hidden');
     btnMenu.classList.remove('header__nav-btn--closed');
     menu.classList.remove('header__nav--show');
     btnMenu.classList.add('header__nav-btn--burger');
   }
 })
+
+for (let item of navItemsLink) {
+  item.addEventListener('click', () => {
+    if (menu.classList.contains('header__nav--show')) {
+      body.classList.toggle('page__body--hidden');
+    }
+  })
+}
 
 anchors.forEach(function(item) {
   // каждому якорю присваиваем обработчик события

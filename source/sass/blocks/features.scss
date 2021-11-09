@@ -1,14 +1,18 @@
 .features {
-  display: flex;
+  @include flex-center;
+
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 503px;
+
+  @media (min-width: 1440px) {
+    width: 1166px;
+    margin: 0 auto;
+  }
 
   @media (max-width: $tablet-width) {
     min-height: 496px;
     justify-content: flex-start;
-    padding: 70px 15px;
+    padding: 35px 15px;
   }
 
   @media (max-width: 555px) {
@@ -56,7 +60,7 @@
     @include resize-txt(18px, 34px);
   }
 
-  &:nth-child(-n+9)::before {
+  &:nth-child(-n+100)::before {
     position: absolute;
     top: 0;
     left: 50%;

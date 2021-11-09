@@ -16,7 +16,7 @@
 
   @media (max-width: $tablet-width) {
     justify-content: flex-start;
-    padding: 50px 16px 70px;
+    padding: 15px 16px 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,6 +26,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    padding-top: 14px;
     padding-bottom: 56px;
   }
 }
@@ -38,6 +39,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
+
+  @media (min-width: 1440px) {
+    width: 1126px;
+    margin: 0 auto;
+  }
 
   @media (max-width: $mobile-width) {
     row-gap: 40px;

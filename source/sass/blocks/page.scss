@@ -1,0 +1,16 @@
+.page {
+  min-height: 100vh;
+  min-width: $min-width;
+  background-color: $main-white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page__body {
+  position: relative;
+
+  &--hidden {
+    overflow: hidden;
+  }
+}
