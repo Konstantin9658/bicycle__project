@@ -1,16 +1,16 @@
 .header {
   flex-shrink: 0;
 
-  background-image: url("../img/header-bike-lg.jpg"), linear-gradient(180deg,#0d0f0c 0%, #222421 80%);
-  background-image: url("../img/header-bike-lg.webp");
+  background-image: url("../img/header-bike-lg.jpg"), $background-header;
+  background-image: url("../img/header-bike-lg.webp"), $background-header;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   min-height: 825px;
 
   @include retina {
-    background: url("../img/header-bike-lg@2x.jpg") no-repeat;
-    background-image: url("../img/header-bike-lg@2x.webp");
+    background: url("../img/header-bike-lg@2x.jpg") no-repeat, $background-header;
+    background-image: url("../img/header-bike-lg@2x.webp"), $background-header;
     background-size: cover;
   }
 
@@ -27,13 +27,20 @@
   }
 
   @media (max-width: $mobile-width) {
-    background: url("../img/header-bike.jpg") no-repeat 50% -3px, linear-gradient(180deg,#0d0f0c, #222421 390px, $main-white 390px);
-    background-image: url("../img/header-bike.webp");
+    background: url("../img/header-bike.jpg"), $background-header;
+    background-image: url("../img/header-bike.webp"), $background-header;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     min-height: 390px;
     padding: 0 16px;
+
+    @include retina {
+      background: url("../img/header-bike@2x.jpg"), $background-header;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
   }
 }
 
@@ -161,7 +168,7 @@
     &--show {
       display: flex;
       width: 100%;
-      min-height: 568px;
+      min-height: 460px;
       border: none;
       animation: bounce .6s;
       filter: drop-shadow(0 4px 20px rgba(0,0,0,.15));
@@ -174,10 +181,12 @@
 }
 
 .header__nav--no-js {
-  display: block;
-  position: static;
-  border: none;
-  height: 110px;
+  @media (max-width: $tablet-width) {
+    display: block;
+    position: static;
+    border: none;
+    height: 110px;
+  }
 
   @media (max-width: $mobile-width) {
     height: 190px;
@@ -185,9 +194,11 @@
 }
 
 .header__nav--no-js .header__nav-list {
-  display: block;
-  padding: 0;
-  min-height: 0;
+  @media (max-width: $tablet-width) {
+    display: block;
+    padding: 0;
+    min-height: 0;
+  }
 
   @media (max-width: $mobile-width) {
     margin-top: 60px;
@@ -306,6 +317,10 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 37px 20px 0 0;
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
 
   @media (max-width: $tablet-width) {
     align-items: center;

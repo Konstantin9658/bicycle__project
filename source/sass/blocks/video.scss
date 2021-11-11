@@ -86,20 +86,20 @@
   width: 929px;
   height: 522px;
   margin: 0 auto;
-  background: url("../img/video-preview-img-lg.jpg") no-repeat, linear-gradient(145deg,$main-black 0%, #080808 50%);
+  background: url("../img/video-preview-img-lg.jpg") no-repeat, $background-video;
   background-image: url("../img/video-preview-img-lg.webp");
 
   @media (max-width: $tablet-width) {
     width: 503px;
     height: 282px;
-    background: url("../img/video-preview-img-md.jpg") no-repeat, linear-gradient(145deg,$main-black 0%, #080808 50%);
+    background: url("../img/video-preview-img-md.jpg") no-repeat, $background-video;
     background-image: url("../img/video-preview-img-md.webp");
   }
 
   @media (max-width: $mobile-width) {
     width: 288px;
     height: 162px;
-    background: url("../img/video-preview-img.jpg") no-repeat, linear-gradient(145deg,$main-black 0%, #080808 50%);
+    background: url("../img/video-preview-img.jpg") no-repeat, $background-video;
     background-image: url("../img/video-preview-img.webp");
   }
 }
