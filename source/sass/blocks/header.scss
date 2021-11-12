@@ -1,5 +1,5 @@
 .header {
-  flex-shrink: 0;
+  flex: 0 0 auto;
 
   background-image: url("../img/header-bike-lg.jpg"), $background-header;
   background-image: url("../img/header-bike-lg.webp"), $background-header;

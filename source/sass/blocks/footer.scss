@@ -4,7 +4,8 @@
   background-color: $main-white;
   text-align: center;
   padding-top: 150px;
-  flex-shrink: 0;
+
+  flex: 0 0 auto;
 
   @media (max-width: $tablet-width) {
     min-height: 812px;

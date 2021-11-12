@@ -1,14 +1,12 @@
 .page {
-  min-height: 100vh;
-  min-width: $min-width;
-  background-color: $main-white;
-
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 
 .page__body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &--hidden {
     overflow: hidden;

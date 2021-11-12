@@ -1,5 +1,5 @@
 .main {
-  flex-grow: 1;
+  flex: 1 0 auto;
 
   h2 {
     @include font(30px, 30px, 600, normal);
