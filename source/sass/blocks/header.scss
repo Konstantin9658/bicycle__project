@@ -176,6 +176,10 @@
 
       position: fixed;
       z-index: 3;
+
+      @media (max-width: $mobile-width) {
+        width: 320px;
+      }
     }
   }
 }
@@ -185,10 +189,6 @@
     display: block;
     position: static;
     border: none;
-    height: 110px;
-  }
-
-  @media (max-width: $mobile-width) {
     height: 190px;
   }
 }
@@ -196,12 +196,13 @@
 .header__nav--no-js .header__nav-list {
   @media (max-width: $tablet-width) {
     display: block;
-    padding: 0;
+    padding: 60px 0 30px;
     min-height: 0;
   }
 
   @media (max-width: $mobile-width) {
     margin-top: 60px;
+    padding: 0;
   }
 }
 
@@ -210,7 +211,7 @@
   color: $color-transparent-menu;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  margin: 0px 21px;
   width: 100%;
 
   @media (max-width: $tablet-width) {
@@ -220,24 +221,21 @@
     color: $main-black;
     background-color: $main-white;
     min-height: 100%;
-    width: 320px;
+    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     padding: 100px 0 30px;
     row-gap: 30px;
+    margin: 0;
 
     scroll-snap-type: x mandatory;
-  }
-
-  @media (max-width: $mobile-width) {
-    width: 100%;
   }
 }
 
 .header__nav-item {
 
-  &:not(:last-child) {
-    margin-right: 85px;
+  &:not(:nth-child(4n+4)) {
+    margin-right: 131px;
   }
 
   a {
