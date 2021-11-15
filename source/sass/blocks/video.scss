@@ -26,7 +26,7 @@
 }
 
 .video__content {
-  width: 929px;
+  width: 430px;
   text-align: center;
 
   @media (max-width: $tablet-width) {
@@ -39,7 +39,7 @@
 
   h2 {
     color: $main-white;
-    padding: 20px;
+    padding: 40px 20px 20px;
 
     @media (max-width: $tablet-width) {
       @include resize-txt(24px, 30px);
