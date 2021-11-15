@@ -96,10 +96,6 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: baseline;
-  // justify-content: space-between;
   display: grid;
   grid-template-columns: max-content max-content;
   row-gap: 10px;
@@ -118,6 +114,7 @@
 }
 
 .footer__contact-item {
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     display: flex;
@@ -145,6 +142,16 @@
     vertical-align: bottom;
     margin-right: 15px;
   }
+
+  &:hover a,
+  &:focus-visible a {
+    transition: $trans--300;
+    color: rgba($main-black, .3);
+  }
+
+  &:active a {
+    opacity: 0.3;
+  }
 }
 
 .footer__contact-link {
@@ -160,15 +167,5 @@
     &--email {
       letter-spacing: -0.1px;
     }
-  }
-
-  &:hover,
-  &:focus-visible {
-    transition: $trans--300;
-    color: rgba($main-black, .7);
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
