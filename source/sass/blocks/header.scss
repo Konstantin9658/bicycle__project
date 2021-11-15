@@ -2,7 +2,6 @@
   flex: 0 0 auto;
 
   background-image: url("../img/header-bike-lg.jpg"), $background-header;
-  background-image: url("../img/header-bike-lg.webp"), $background-header;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -10,7 +9,6 @@
 
   @include retina {
     background: url("../img/header-bike-lg@2x.jpg") no-repeat, $background-header;
-    background-image: url("../img/header-bike-lg@2x.webp"), $background-header;
     background-size: cover;
   }
 
@@ -28,7 +26,6 @@
 
   @media (max-width: $mobile-width) {
     background: url("../img/header-bike.jpg"), $background-header;
-    background-image: url("../img/header-bike.webp"), $background-header;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;

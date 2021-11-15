@@ -54,6 +54,15 @@
     border-radius: $form-radius;
     padding-left: 30px;
 
+    &[type=number]::-webkit-inner-spin-button,
+    &[type=number]::-webkit-outer-spin-button,
+    &[type=number] :hover,
+    &[type=number]:focus {
+      -moz-appearance: textfield;
+      -webkit-appearance: none;
+      -moz-appearance: number-input;
+    }
+
     @media (max-width: $tablet-width) {
       padding-left: 21px;
     }
