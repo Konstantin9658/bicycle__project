@@ -46,9 +46,11 @@
     @include font(17px, 31px, 300, normal);
     color: rgba($main-black, .7);
     padding-bottom: 42px;
+    letter-spacing: 0.4px;
 
     @media (max-width: $tablet-width) {
       padding-bottom: 20px;
+      letter-spacing: 0.5px;
 
       br {
         display: none;
@@ -64,6 +66,7 @@
 .footer__wrapper {
   width: 957px;
   margin: 0 auto;
+  padding-bottom: 40px;
 
   iframe {
     width: 100%;
@@ -84,11 +87,11 @@
 
   @media (max-width: $tablet-width) {
     width: 100%;
-    padding: 0 35px;
+    padding: 0 35px 40px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 0;
+    padding: 0 0 40px;
   }
 }
 
@@ -99,7 +102,7 @@
   display: grid;
   grid-template-columns: max-content max-content;
   row-gap: 10px;
-  column-gap: 82px;
+  column-gap: 97px;
 
   @media(min-width: 768px) {
     width: 561px;

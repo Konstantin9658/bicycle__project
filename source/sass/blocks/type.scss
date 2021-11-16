@@ -1,5 +1,5 @@
 .type {
-  min-height: fit-content;
+  min-height: 949px;
   background-color: $bcg-type;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 
   @media (max-width: $tablet-width) {
     justify-content: flex-start;
-    padding: 15px 16px 20px;
+    padding: 50px 16px 20px;
   }
 
   @media (min-width: $desktop-width) {
