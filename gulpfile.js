@@ -100,5 +100,10 @@ gulp.task('clean', function () {
   return del('build');
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
+
 gulp.task('build', gulp.series('clean', 'copy', 'css', 'webp', 'images', 'sprite', 'html'));
 gulp.task('start', gulp.series('build', 'server'));
